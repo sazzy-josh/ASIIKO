@@ -11,7 +11,7 @@ const Navbar = () => {
   return (
     <BaseLayout>
        {/* NAV MAIN LAYOUT */}
-       <div className="flex py-2 justify-between items-center w-full">
+       <div className="flex py-3 box-border justify-between items-center w-full">
 
          {/* LOGO GOES HERE */}
          <div className="z-[999]">

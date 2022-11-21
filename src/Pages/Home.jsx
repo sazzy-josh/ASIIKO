@@ -2,6 +2,7 @@ import React from 'react'
 import { BaseLayout } from '../layouts'
 import HeroImg from "../assets/hero_img.png"
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
+import { Button } from '../components'
 
 const Home = () => {
     return (
@@ -9,9 +10,9 @@ const Home = () => {
       {/* HOME SECTION */}
       <div className='flex flex-col lg:items-center lg:justify-between lg:flex lg:flex-row max-h-[calc(100vh_-_51px)] w-full'>
         {/* HOMEPAGE TEXT CONTENT */}
-        <div className='w-full lg:w-1/2 gap-y-3 min-h-screen lg:h-full flex flex-col justify-center'>  
+        <div className='w-full lg:w-1/2 gap-y-4 lg:min-h-screen lg:h-full flex flex-col lg:justify-center my-10 lg:my-0'>  
 
-          <div className='   flex flex-col font-bold text-2xl lg:text-5xl gap-y-3'>
+          <div className='   flex flex-col font-bold text-3xl lg:text-5xl gap-y-3'>
            <p>Track Your Employees'</p>
            <p>Time And Automate</p>
            <p>Your Timesheets.</p>
@@ -21,16 +22,24 @@ const Home = () => {
             <IoMdCheckmarkCircleOutline className='text-lg text-blue-400'/>
           </div>
 
-          <p className='leading-loose'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit rerum assumenda labore eum commodi perspiciatis, accusamus excepturi? Voluptate tempore facilis doloremque, cumque vel dolor eum, sunt itaque aut exercitationem quae ullam esse nesciunt eos illum, hic modi perferendis nam molestiae magnam nobis ex. A voluptate cum, rem nihil consequuntur est.</p>
+          <p className='leading-loose w-full lg:w-3/4 text-slate-400 font-medium'>Asiiko helps you track your employees time and automate timesheets.Everday,real-time updates that lets you keep on top of your teams job activities.
+          </p>
+
+          <div className='flex flex-col lg:flex-row gap-4'>
+            <div className='w-full lg:w-48 h-12'><Button bg_color="bg-blue-500"  txt_color="text-white" content={"GET STARTED TODAY"}/></div>
+            <div className='w-full lg:w-48 h-12'><Button bg_color="bg-cyan-300" content={"LEARN MORE"}/></div>
+
+          </div>
 
         </div>
 
         {/* HERO IMAGE */}
-        <div className='w-1/2 h-full flex  justify-end'>
+        <div className='w-full lg:w-1/2 h-full flex justify-center lg:justify-end'>
             <img src={HeroImg} 
              alt="asiiko_hero_image"  
-             className='object-contain '
+             className='object-contain w-80 h-80 lg:w-auto lg:h-auto'
              />
+             
 
         </div>
       </div>
