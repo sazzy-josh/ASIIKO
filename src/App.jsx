@@ -1,14 +1,12 @@
 import React from 'react'
-import { Navbar } from "./components"
+import { AsiikoRoutes } from './routes'
 
 
 const App = () => {
 
   return (
     <>
-    <Navbar/>
-    
-     
+      <AsiikoRoutes />
     </>
   )
 }
