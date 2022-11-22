@@ -34,10 +34,10 @@ const Navbar = () => {
 
          {/* CALL TO ACTION BUTTONS FOR LARGE SCREENS */}
          <div className="hidden lg:flex gap-x-5">
-           <div className="h-14 w-32 ">
+           <div className="h-12 w-32 ">
             <Button content="LOG IN" bg_color="bg-blue-500" txt_color="text-white" />
            </div>
-           <div className="h-14 w-auto">
+           <div className="h-12 w-auto">
            <Button content="GET STARTED" bg_color="bg-cyan-300" txt_color="text-black" />
            </div>
          </div>

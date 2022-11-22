@@ -4,7 +4,7 @@ import HeroImg from "../assets/hero_img.png"
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import { Button } from '../components'
 
-const Home = () => {
+const Home = ({displayModal}) => {
     return (
     <BaseLayout>
       {/* HOME SECTION */}
@@ -26,8 +26,8 @@ const Home = () => {
           </p>
 
           <div className='flex flex-col lg:flex-row gap-5'>
-            <div className='w-full lg:w-60 h-14'><Button bg_color="bg-blue-500"  txt_color="text-white" content={"GET STARTED TODAY"}/></div>
-            <div className='w-full lg:w-60 h-14'><Button bg_color="bg-cyan-300" content={"LEARN MORE"}/></div>
+            <div className='w-full lg:w-60 h-14'><Button bg_color="bg-blue-500"  txt_color="text-white" content={"GET STARTED TODAY"} handleClick={displayModal}/></div>
+            <div className='w-full lg:w-60 h-14'><Button bg_color="bg-cyan-300" content={"LEARN MORE"} handleClick={displayModal}/></div>
 
           </div>
 
