@@ -1,11 +1,12 @@
 import React from 'react'
 import { Routes , Route } from 'react-router-dom'
-import { Navbar } from '../components'
+import { Modal, Navbar } from '../components'
 import { Home } from '../Pages'
 
 const AsiikoRoutes = () => {
   return (
     <>
+    <Modal />
     {/* NAVBAR GOES HERE */}
     <Navbar/>
 

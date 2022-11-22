@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Link } from "react-router-dom"
 import { NavItems } from "../mock-data" 
 import { BaseLayout } from "../layouts"
 import Logo from "../assets/img2.png"
@@ -14,15 +15,17 @@ const Navbar = () => {
        <div className="flex py-3 box-border justify-between items-center w-full">
 
          {/* LOGO GOES HERE */}
-         <div className="z-[999]">
+         <div className="z-[99]">
+          <Link to='/'>
             <img src={Logo} alt="asiiko_logo" className="w-25 h-8 lg:w-30 lg:h-10 object-contain "/>
+          </Link>
          </div>
 
          {/* NAV ITEMS FOR LARGE SCREENS*/}
          <div className="hidden lg:flex gap-x-8">
             {NavItems.map((item) => {
           return (
-            <div key={item.id} className="font-medium">
+            <div key={item.id} className="font-medium cursor-pointer">
               {item.title}
             </div>
         )
@@ -31,10 +34,10 @@ const Navbar = () => {
 
          {/* CALL TO ACTION BUTTONS FOR LARGE SCREENS */}
          <div className="hidden lg:flex gap-x-5">
-           <div className="h-12 w-32 ">
+           <div className="h-14 w-32 ">
             <Button content="LOG IN" bg_color="bg-blue-500" txt_color="text-white" />
            </div>
-           <div className="h-12 w-auto">
+           <div className="h-14 w-auto">
            <Button content="GET STARTED" bg_color="bg-cyan-300" txt_color="text-black" />
            </div>
          </div>
@@ -56,13 +59,13 @@ const Navbar = () => {
          <div className="px-1 z-30 bg-white rounded fixed top-1 right-2 shadow-sm w-10 h-10 flex items-center justify-center cursor-pointer"
           onClick={() => handleToggleMenu(prev => !prev) }
          >
-              <p className="rotate-[45deg] text-6xl text-black ">+</p>
+           <p className="rotate-[45deg] text-6xl text-black ">+</p>
          </div>
          {/* MENU ITEMS GOES HERE */}
          <div className="flex flex-col gap-y-4 w-full">
          {NavItems.map((item) => {
           return (
-             <div key={item.id} className="font-medium w-full p-2 rounded-md cursor-pointer hover:bg-slate-200 ">
+             <div key={item.id} className="font-medium w-full p-2 rounded-md cursor-pointer hover:bg-slate-200">
               {item.title}
               
             </div>
@@ -71,10 +74,10 @@ const Navbar = () => {
          </div>
          {/* CALL TO ACTION BUTTONS GOES HERE */}
          <div className="flex flex-col justify-center items-center gap-y-4 my-4 p-2">
-            <div className="h-10 w-28">
+            <div className="h-14 w-28">
              <Button content="LOG IN" bg_color="bg-blue-500" txt_color="text-white" />
             </div>
-            <div className="h-10 w-auto">
+            <div className="h-14 w-auto">
              <Button content="GET STARTED" bg_color="bg-cyan-100" txt_color="text-slate-600" />
             </div>
          </div>
